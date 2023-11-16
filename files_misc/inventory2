@@ -1,0 +1,13 @@
+[web_servers]
+web1 ansible_host=18.170.32.206 ansible_user=ec2-user ansible_become=yes ansible_connection=ssh
+web2 ansible_host=35.177.187.121 ansible_user=ec2-user ansible_become=yes ansible_connection=ssh
+
+[db_servers]
+db1 ansible_host=18.170.221.152 ansible_user=ubuntu ansible_become=yes ansible_connection=ssh
+
+[all_servers:children]
+web_servers
+db_servers
+
+[all:vars]
+ansible_ssh_private_key_file=/home/ec2-user/cpdevopsew-eu-west-2.pem

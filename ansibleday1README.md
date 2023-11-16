@@ -70,9 +70,8 @@ ansible_ssh_private_key_file=/home/ec2-user/<YOUR-PEM-FILE-NAME>.pem
 
 ---
 
-````bash
-
 ```bash
+
 [webservers]
 node_amz1 ansible_host=13.40.106.75 ansible_user=ec2-user
 
@@ -83,7 +82,7 @@ node_ubuntu ansible_host=18.133.245.112 ansible_user=ubuntu
 ansible_ssh_private_key_file=/home/ec2-user/cpdevopsew-eu-west-2.pem
 
 
-````
+```
 
 - Test ping to only node1
 

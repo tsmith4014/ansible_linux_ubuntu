@@ -8,7 +8,7 @@ ansible all -m ping  -i inventory
 
 ```
 
-- Create a yaml file named "pb1.yml" and make sure all our hosts are up and running.
+- Create a yaml file named "pb1.yml" and make sure all our hosts are up and running. The file has been included in the repository but a key note here is this file must be placed in the same directory as the inventory file in the main node.
 
 ```yaml
 ---
@@ -29,6 +29,7 @@ ansible-playbook pb1.yml -i inventory
 ### Ansible module “Copy”
 
 - Create a text file named "testfile1.txt" and write "Hello Ansible" with using vim. Then create a yaml file name "pb2.yml" and send the "testfile1.txt" to the hosts.
+- The file has been included in the repository but a key note here is this file must be placed in the same directory as the inventory file in the main node.
 
 ```yaml
 ---
@@ -72,6 +73,7 @@ $ vim pb3.yml
 ---
 - name: Apache installation for webservers
   hosts: webservers
+  become: true
   tasks:
    - name: install the latest version of Apache
      yum:
@@ -83,6 +85,7 @@ $ vim pb3.yml
 
 - name: Apache installation for ubuntuservers
   hosts: ubuntuservers
+  become: true
   tasks:
    - name: install the latest version of Apache
      apt:
