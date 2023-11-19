@@ -1,0 +1,9 @@
+- name: show facts
+  hosts: all
+  become: yes
+  tasks:
+  - name: Install Apache on Debian-based Systems
+    apt:
+      name: apache2
+      state: latest
+    when: ansible_os_family == "Debian"

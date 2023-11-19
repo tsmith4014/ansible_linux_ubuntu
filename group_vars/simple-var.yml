@@ -1,0 +1,9 @@
+---
+- name: Test Playbook with Variables
+  hosts: all
+  vars:
+    name: "Hello, DevOps!"
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "{{ name }}"

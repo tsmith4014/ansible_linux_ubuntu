@@ -1,0 +1,9 @@
+---
+- name: Test Playbook with Variables
+  hosts: all
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Print a message
+      debug:
+        msg: "{{ name }}"
