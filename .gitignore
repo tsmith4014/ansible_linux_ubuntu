@@ -2,3 +2,4 @@
 .terraform/providers/registry.terraform.io/
 terraform.tfstate
 .terraform/
+terraform.tfstate.backup
